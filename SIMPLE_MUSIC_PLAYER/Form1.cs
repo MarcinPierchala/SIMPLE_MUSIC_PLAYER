@@ -50,7 +50,15 @@ namespace SIMPLE_MUSIC_PLAYER
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = trackUrl[listBox1.SelectedIndex];
+            try //(listBox1.SelectedIndex < trackUrl.Length)
+            {
+                axWindowsMediaPlayer1.URL = trackUrl[listBox1.SelectedIndex];
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            catch
+            {
+
+            }
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
