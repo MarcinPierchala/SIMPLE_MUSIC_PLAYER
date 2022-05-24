@@ -17,6 +17,7 @@ namespace SIMPLE_MUSIC_PLAYER
             InitializeComponent();
         }
 
+        
         string[] trackName, trackUrl;
 
 
@@ -63,7 +64,22 @@ namespace SIMPLE_MUSIC_PLAYER
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
+            //axWindowsMediaPlayer1.Ctlenabled = false;
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
